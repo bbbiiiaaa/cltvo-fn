@@ -109,6 +109,10 @@ function cltvo_wpURL_2_path( $url ){
 	return $path;
 }
 
+function cltvo_dinero( $numero ){
+	return '$ ' . number_format($numero, 2);
+}
+
 
 
 ?>
