@@ -108,12 +108,20 @@ function cltvo_wpURL_2_path( $url ){
 	$path = str_replace(home_url('/'), $path, $url);
 	return $path;
 }
-
-function cltvo_is_local_h(){
-	if($_SERVER['HTTP_HOST'] == 'localhost:8888'){
-		return true;
-	}else{
-		return false;
+if( !function_exists('cltvo_is_local_h') ){
+	function cltvo_is_local_h(){
+		if($_SERVER['HTTP_HOST'] == 'localhost:8888'){
+			return true;
+		}else{
+			return false;
+		}
+	}
+}
+if( !function_exists('cltvo_print_r') ){
+	function cltvo_print_r($var){
+		echo "<pre>";
+		print_r($var);
+		echo "</pre>";
 	}
 }
 ?>
