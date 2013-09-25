@@ -109,10 +109,11 @@ function cltvo_wpURL_2_path( $url ){
 	return $path;
 }
 
-function cltvo_dinero( $numero ){
-	return '$ ' . number_format($numero, 2);
+function cltvo_is_local_h(){
+	if($_SERVER['HTTP_HOST'] == 'localhost:8888'){
+		return true;
+	}else{
+		return false;
+	}
 }
-
-
-
 ?>
