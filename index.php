@@ -44,7 +44,7 @@ function es_mail($string){
 //dale el ID del post
 //y un array con los ids de las imágenes a excluir, (si ninguna usar false)
 //y te regresará un array con las URL de las imágenes de ese post
-function cltvo_todasImgsDelPost($parentId, $size, $exclude){
+function cltvo_todasImgsDelPost($parentId, $size, $exclude=false){
 	
 	$query_images_args = array(
 		'post_parent' => $parentId,
