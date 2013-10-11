@@ -147,4 +147,11 @@ function sgr_filter_image_sizes( $sizes) {
 	return $sizes;
 }
 //add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
+
+//convierte int a string con signo de pesos, con punto decimal y dos ceros al final
+if( !function_exists('cltvo_dinero') ){
+	function cltvo_dinero( $numero ){
+		return '$ ' . number_format($numero, 2);
+	}
+}
 ?>
